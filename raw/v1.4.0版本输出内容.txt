@@ -1,0 +1,333 @@
+
+
+========================================
+  ESP32-WROVER-IE 网络音频转发蓝牙 v1.4.0
+  作者: 陈志明  电话:13654132703  微信:tsearcher
+  编译时间: 2026-08-22
+========================================
+[License] 本机 MAC: 28:05:A5:35:54:78  状态: 未授权
+[按键] next=GPIO13 prev=GPIO14 clear=GPIO15(长按3s)
+[PSRAM] 4096KB
+[MP3] 预分配 30KB (PSRAM)
+[AAC] 预分配 128KB (PSRAM)
+[电台] 自定义数组 50×312B = 15600B (PSRAM)
+[NVS] 音量=10 序号=-1 自定义=1
+[WiFi] 连接 home_wifi_5G....... 已连接 IP:192.168.124.18
+[NTP] 已配置对时服务器
+[License] 已从 NVS 恢复授权
+[PCM] ringbuf=0x3ffde6d4 size=131072 (内部RAM)
+E (3468) task_wdt: esp_task_wdt_init(517): TWDT already initialized
+[WDT] TWDT 已配置 15s (panic)
+[A2DP] 启动（记忆直连已开启）...
+[蓝牙] 设备名: ESP32-Radio
+[蓝牙] 已设为可发现模式
+[任务] 音频解码任务启动 (Core 1)
+[任务] 音频任务已创建 (Core 1)
+[GAP] 事件=10
+
+========== 命令帮助 ==========
+play [序号]      播放指定序号电台
+list [分类]      显示播放列表(可选分类)
+save [名称] [URL] [分类]  保存自定义电台
+next             播放下一个
+prev             播放前一个
+pause            播放/暂停切换（同耳机 AVRCP 键）
+del [序号]       删除自定义电台
+vol [0-100]      调整音量
+stop             停止播放
+wif [SSID] [密码] 设置WiFi
+status           显示状态
+test [序号]      测试音频流可访问性
+help             显示帮助
+scan             重新扫描蓝牙设备
+restart          重启设备（测试用）
+clear            清除蓝牙配对
+pair             进入蓝牙配对模式(暂停A2DP,可被手机/PC搜索)
+normal           恢复A2DP正常模式(配对完成后用)
+lic [激活码]     激活/查看授权(无参=查看状态)
+clearlic         清除授权(播放将锁定)
+------------------------------
+AVRCP: 耳机 play/pause/next/prev/stop 键可用
+记忆直连: 开机自动连上次设备(失败回退扫描)
+TWDT: audioTask 卡死 15s 触发重启
+AVRCP: 耳机 play/pause/next/prev/stop 键可用
+License: 未授权时播放锁定(lic激活,clearlic清除)
+==============================
+[GAP] 事件=10
+[GAP] 事件=10
+[GAP] 事件=10
+[GAP] 事件=10
+[A2DP] esp_a2d_connect 返回=0 (0=OK)
+[A2DP] 事件=0x4 状态=CONNECTING
+[A2DP] connecting_hdlr 事件=4
+[A2DP] 事件=0x0 状态=CONNECTING
+[A2DP] 连接状态=Connecting disc_rsn=0
+[A2DP连接] Connecting
+[A2DP] connecting_hdlr 事件=0
+[GAP] 事件=16
+[GAP] ACL_CONN_CMPL stat=260
+[A2DP] 事件=0x0 状态=CONNECTING
+[A2DP] 连接状态=Disconnected disc_rsn=0
+[A2DP连接] Disconnected
+[A2DP] 断开 heap=46852
+[A2DP] connecting_hdlr 事件=0
+[GAP] 事件=16
+[GAP] ACL_CONN_CMPL stat=0
+[A2DP] 事件=0xff00 状态=UNCONNECTED
+[A2DP] esp_a2d_connect 返回=0 (0=OK)
+[A2DP] 事件=0x0 状态=CONNECTING
+[A2DP] 连接状态=Connecting disc_rsn=0
+[A2DP连接] Connecting
+[A2DP] connecting_hdlr 事件=0
+[NTP] 已同步[A2DP] 事件=0xff00 状态=CONNECTED
+[A2DP] 事件=0x3 状态=CONNECTED
+
+[A2DP] 事件=0xff00 状态=CONNECTING
+[A2DP] connecting_hdlr 事件=65280
+[A2DP] 事件=0x3 状态=CONNECTING
+[A2DP] connecting_hdlr 事件=3
+[A2DP] 事件=0x3 状态=CONNECTED
+[A2DP] 事件=0xff00 状态=CONNECTED
+[A2DP] 事件=0x3 状态=CONNECTED
+[A2DP] 事件=0x0 状态=CONNECTED
+[A2DP] 连接状态=Disconnected disc_rsn=0
+[A2DP连接] Disconnected
+[A2DP] 断开 heap=45176
+[A2DP] 退避 5000ms 后重连（第 2 次失败）
+[GAP] 事件=17
+[GAP] ACL_DISCONN_CMPL reason=290
+[A2DP连接] Disconnected
+[A2DP] 断开 heap=45736
+[A2DP] 退避 10000ms 后重连（第 3 次失败）
+[GAP] 事件=16
+[GAP] ACL_CONN_CMPL stat=0
+[GAP] 事件=21
+[A2DP] 事件=0x0 状态=UNCONNECTED
+[A2DP] 连接状态=Connecting disc_rsn=0
+[A2DP连接] Connecting
+[A2DP] 事件=0x2 状态=UNCONNECTED
+[A2DP] 事件=0x9 状态=UNCONNECTED
+[A2DP] 事件=0x0 状态=UNCONNECTED
+[A2DP] 连接状态=Connected disc_rsn=0
+[A2DP连接] Connected
+[A2DP] 连接成功 heap=40096
+[A2DP] 事件=0xff00 状态=UNCONNECTED
+[A2DP] esp_a2d_connect 返回=0 (0=OK)
+[任务] 稳定后 heap=37192 PSRAM=3863772
+[播放] 自定义URL
+[URL] http://satellitepull.cnr.cn/live/wxsdxcgb/playlist.m3u8
+[HLS] 段表 128KB + 播放列表 32KB (PSRAM)
+[HLS] 打开 http://satellitepull.cnr.cn/live/wxsdxcgb/playlist.m3u8
+[HTTP] 连接 http://satellitepull.cnr.cn:80/live/wxsdxcgb/playlist.m3u8
+[HLS] master → variant（最低码率）
+[HTTP] 连接 http://218.60.173.155:80/satellitepull.cnr.cn/live/wxsdxcgb/playlist.m3u8?wsSession=492a7b5a524a298166d69f81-178739635280033&wsIPSercert=cb7911a3f37459a9a0f319d8559bffdf&wsBindIP=2&wsserid=1168225264140827673
+[GAP] 事件=13
+[HLS] 直播：2 段 targetDur=3s 起始seq=1787396353
+[HTTP] 连接 http://218.60.173.155:80/satellitepull.cnr.cn/live/wxsdxcgb/1787396352.ts?wsSession=492a7b5a524a298166d69f81-178739635280033&wsIPSercert=cb7911a3f37459a9a0f319d8559bffdf&wsBindIP=2&wsserid=1168225264140827673&wsApp=HLS
+[HLS] 预缓冲 55KB
+[播放] 启动成功
+[直发] 48000Hz（不重采样，测试 Bluedroid 是否协商 48k SBC）
+[HTTP] 连接 http://218.60.173.155:80/satellitepull.cnr.cn/live/wxsdxcgb/1787396353.ts?wsSession=492a7b5a524a298166d69f81-178739635280033&wsIPSercert=cb7911a3f37459a9a0f319d8559bffdf&wsBindIP=2&wsserid=1168225264140827673&wsApp=HLS
+[HTTP] 连接 http://218.60.173.155:80/satellitepull.cnr.cn/live/wxsdxcgb/playlist.m3u8?wsSession=492a7b5a524a298166d69f81-178739635280033&wsIPSercert=cb7911a3f37459a9a0f319d8559bffdf&wsBindIP=2&wsserid=1168225264140827673
+[HLS] 暂无新段（窗口 2 段均已下载）
+[HTTP] 连接 http://218.60.173.155:80/satellitepull.cnr.cn/live/wxsdxcgb/playlist.m3u8?wsSession=492a7b5a524a298166d69f81-178739635280033&wsIPSercert=cb7911a3f37459a9a0f319d8559bffdf&wsBindIP=2&wsserid=1168225264140827673
+[HLS] 暂无新段（窗口 2 段均已下载）
+[HTTP] 连接 http://218.60.173.155:80/satellitepull.cnr.cn/live/wxsdxcgb/playlist.m3u8?wsSession=492a7b5a524a298166d69f81-178739635280033&wsIPSercert=cb7911a3f37459a9a0f319d8559bffdf&wsBindIP=2&wsserid=1168225264140827673
+[HLS] 刷新：+1 新段
+[HTTP] 连接 http://218.60.173.155:80/satellitepull.cnr.cn/live/wxsdxcgb/1787396354.ts?wsSession=492a7b5a524a298166d69f81-178739635280033&wsIPSercert=cb7911a3f37459a9a0f319d8559bffdf&wsBindIP=2&wsserid=1168225264140827673&wsApp=HLS
+[HTTP] 连接 http://218.60.173.155:80/satellitepull.cnr.cn/live/wxsdxcgb/playlist.m3u8?wsSession=492a7b5a524a298166d69f81-178739635280033&wsIPSercert=cb7911a3f37459a9a0f319d8559bffdf&wsBindIP=2&wsserid=1168225264140827673
+[HLS] 暂无新段（窗口 3 段均已下载）
+[A2DP] 事件=0xff00 状态=CONNECTING
+[A2DP] connecting_hdlr 事件=65280
+[A2DP] 事件=0x3 状态=UNCONNECTED
+[HTTP] 连接 http://218.60.173.155:80/satellitepull.cnr.cn/live/wxsdxcgb/playlist.m3u8?wsSession=492a7b5a524a298166d69f81-178739635280033&wsIPSercert=cb7911a3f37459a9a0f319d8559bffdf&wsBindIP=2&wsserid=1168225264140827673
+[HLS] 刷新：+1 新段
+[HTTP] 连接 http://218.60.173.155:80/satellitepull.cnr.cn/live/wxsdxcgb/1787396355.ts?wsSession=492a7b5a524a298166d69f81-178739635280033&wsIPSercert=cb7911a3f37459a9a0f319d8559bffdf&wsBindIP=2&wsserid=1168225264140827673&wsApp=HLS
+[A2DP] 事件=0xff00 状态=UNCONNECTED
+[A2DP] esp_a2d_connect 返回=0 (0=OK)
+[A2DP] 事件=0xff00 状态=CONNECTING
+[A2DP] connecting_hdlr 事件=65280
+[A2DP] 事件=0x3 状态=CONNECTING
+[A2DP] connecting_hdlr 事件=3
+[A2DP] 事件=0x3 状态=CONNECTED
+[GAP] 事件=13
+[A2DP] 事件=0x3 状态=CONNECTED
+[A2DP] 事件=0x1 状态=CONNECTED
+[A2DP音频] Started
+[A2DP] 音频流启动 heap=8060
+[HTTP] 连接 http://218.60.173.155:80/satellitepull.cnr.cn/live/wxsdxcgb/playlist.m3u8?wsSession=492a7b5a524a298166d69f81-178739635280033&wsIPSercert=cb7911a3f37459a9a0f319d8559bffdf&wsBindIP=2&wsserid=1168225264140827673
+[HTTP] 连接 http://218.60.173.155:80/satellitepull.cnr.cn/live/wxsdxcgb/1787396360.ts?wsSession=492a7b5a524a298166d69f81-178739635280033&wsIPSercert=cb7911a3f37459a9a0f319d8559bffdf&wsBindIP=2&wsserid=1168225264140827673&wsApp=HLS
+[AAC] 解码错误 #1 code=-15 AAC decode error -15
+[状态] 自定义URL | 播放 | vol=10% heap=18036
+[HTTP] 连接 http://218.60.173.155:80/satellitepull.cnr.cn/live/wxsdxcgb/1787396361.ts?wsSession=492a7b5a524a298166d69f81-178739635280033&wsIPSercert=cb7911a3f37459a9a0f319d8559bffdf&wsBindIP=2&wsserid=1168225264140827673&wsApp=HLS
+[AAC] 解码错误 #2 code=-15 AAC decode error -15
+[HTTP] 连接 http://218.60.173.155:80/satellitepull.cnr.cn/live/wxsdxcgb/1787396362.ts?wsSession=492a7b5a524a298166d69f81-178739635280033&wsIPSercert=cb7911a3f37459a9a0f319d8559bffdf&wsBindIP=2&wsserid=1168225264140827673&wsApp=HLS
+[A2DP] 事件=0xff00 状态=CONNECTED
+[HTTP] 连接 http://218.60.173.155:80/satellitepull.cnr.cn/live/wxsdxcgb/playlist.m3u8?wsSession=492a7b5a524a298166d69f81-178739635280033&wsIPSercert=cb7911a3f37459a9a0f319d8559bffdf&wsBindIP=2&wsserid=1168225264140827673
+[HTTP] 连接 http://218.60.173.155:80/satellitepull.cnr.cn/live/wxsdxcgb/1787396363.ts?wsSession=492a7b5a524a298166d69f81-178739635280033&wsIPSercert=cb7911a3f37459a9a0f319d8559bffdf&wsBindIP=2&wsserid=1168225264140827673&wsApp=HLS
+[HTTP] 连接 http://218.60.173.155:80/satellitepull.cnr.cn/live/wxsdxcgb/1787396364.ts?wsSession=492a7b5a524a298166d69f81-178739635280033&wsIPSercert=cb7911a3f37459a9a0f319d8559bffdf&wsBindIP=2&wsserid=1168225264140827673&wsApp=HLS
+[AAC] 解码错误 #3 code=-15 AAC decode error -15
+[HTTP] 连接 http://218.60.173.155:80/satellitepull.cnr.cn/live/wxsdxcgb/1787396365.ts?wsSession=492a7b5a524a298166d69f81-178739635280033&wsIPSercert=cb7911a3f37459a9a0f319d8559bffdf&wsBindIP=2&wsserid=1168225264140827673&wsApp=HLS
+[A2DP] 事件=0xff00 状态=CONNECTED
+[HTTP] 连接 http://218.60.173.155:80/satellitepull.cnr.cn/live/wxsdxcgb/playlist.m3u8?wsSession=492a7b5a524a298166d69f81-178739635280033&wsIPSercert=cb7911a3f37459a9a0f319d8559bffdf&wsBindIP=2&wsserid=1168225264140827673
+[HTTP] 连接 http://218.60.173.155:80/satellitepull.cnr.cn/live/wxsdxcgb/1787396366.ts?wsSession=492a7b5a524a298166d69f81-178739635280033&wsIPSercert=cb7911a3f37459a9a0f319d8559bffdf&wsBindIP=2&wsserid=1168225264140827673&wsApp=HLS
+[HTTP] 连接 http://218.60.173.155:80/satellitepull.cnr.cn/live/wxsdxcgb/1787396367.ts?wsSession=492a7b5a524a298166d69f81-178739635280033&wsIPSercert=cb7911a3f37459a9a0f319d8559bffdf&wsBindIP=2&wsserid=1168225264140827673&wsApp=HLS
+[HTTP] 连接 http://218.60.173.155:80/satellitepull.cnr.cn/live/wxsdxcgb/1787396368.ts?wsSession=492a7b5a524a298166d69f81-178739635280033&wsIPSercert=cb7911a3f37459a9a0f319d8559bffdf&wsBindIP=2&wsserid=1168225264140827673&wsApp=HLS
+[A2DP] 事件=0xff00 状态=CONNECTED
+[HTTP] 连接 http://218.60.173.155:80/satellitepull.cnr.cn/live/wxsdxcgb/playlist.m3u8?wsSession=492a7b5a524a298166d69f81-178739635280033&wsIPSercert=cb7911a3f37459a9a0f319d8559bffdf&wsBindIP=2&wsserid=1168225264140827673
+[HTTP] 连接 http://218.60.173.155:80/satellitepull.cnr.cn/live/wxsdxcgb/1787396369.ts?wsSession=492a7b5a524a298166d69f81-178739635280033&wsIPSercert=cb7911a3f37459a9a0f319d8559bffdf&wsBindIP=2&wsserid=1168225264140827673&wsApp=HLS
+[AAC] 解码错误 #4 code=-15 AAC decode error -15
+[HTTP] 连接 http://218.60.173.155:80/satellitepull.cnr.cn/live/wxsdxcgb/1787396370.ts?wsSession=492a7b5a524a298166d69f81-178739635280033&wsIPSercert=cb7911a3f37459a9a0f319d8559bffdf&wsBindIP=2&wsserid=1168225264140827673&wsApp=HLS
+[状态] 自定义URL | 播放 | vol=10% heap=17704
+[HTTP] 连接 http://218.60.173.155:80/satellitepull.cnr.cn/live/wxsdxcgb/1787396371.ts?wsSession=492a7b5a524a298166d69f81-178739635280033&wsIPSercert=cb7911a3f37459a9a0f319d8559bffdf&wsBindIP=2&wsserid=1168225264140827673&wsApp=HLS
+[A2DP] 事件=0xff00 状态=CONNECTED
+[HTTP] 连接 http://218.60.173.155:80/satellitepull.cnr.cn/live/wxsdxcgb/playlist.m3u8?wsSession=492a7b5a524a298166d69f81-178739635280033&wsIPSercert=cb7911a3f37459a9a0f319d8559bffdf&wsBindIP=2&wsserid=1168225264140827673
+[HTTP] 连接 http://218.60.173.155:80/satellitepull.cnr.cn/live/wxsdxcgb/1787396373.ts?wsSession=492a7b5a524a298166d69f81-178739635280033&wsIPSercert=cb7911a3f37459a9a0f319d8559bffdf&wsBindIP=2&wsserid=1168225264140827673&wsApp=HLS
+> next
+[播放] CNR 中国交通广播                  
+[URL] http://live.xmcdn.com/live/45/64.m3u8                                         
+[HLS] 段表 128KB + 播放列表 32KB (PSRAM)
+[HLS] 打开 http://live.xmcdn.com/live/45/64.m3u8                                         
+[HTTP] 连接 http://live.xmcdn.com:80/live/45/64.m3u8                                         
+[HLS] 播放列表无媒体段
+[错误] HLS 打开失败
+> next
+[播放] CNR 中国乡村之声                  
+[URL] http://live.xmcdn.com/live/46/64.m3u8                                         
+[HLS] 段表 128KB + 播放列表 32KB (PSRAM)
+[HLS] 打开 http://live.xmcdn.com/live/46/64.m3u8                                         
+[HTTP] 连接 http://live.xmcdn.com:80/live/46/64.m3u8                                         
+[HLS] 播放列表无媒体段
+[错误] HLS 打开失败
+> next
+[播放] CNR 经典音乐广播 101.8            
+[URL] http://live.xmcdn.com/live/13/64.m3u8                                         
+[HLS] 段表 128KB + 播放列表 32KB (PSRAM)
+[HLS] 打开 http://live.xmcdn.com/live/13/64.m3u8                                         
+[HTTP] 连接 http://live.xmcdn.com:80/live/13/64.m3u8                                         
+[HLS] 播放列表无媒体段
+[错误] HLS 打开失败
+[A2DP] 事件=0xff00 状态=CONNECTED
+> next
+[播放] CNR 中华之声                    
+[URL] http://live.xmcdn.com/live/14/64.m3u8                                         
+[HLS] 段表 128KB + 播放列表 32KB (PSRAM)
+[HLS] 打开 http://live.xmcdn.com/live/14/64.m3u8                                         
+[HTTP] 连接 http://live.xmcdn.com:80/live/14/64.m3u8                                         
+[HLS] 播放列表无媒体段
+[错误] HLS 打开失败
+> next
+[播放] CNR 维语广播                    
+[URL] http://live.xmcdn.com/live/40/64.m3u8                                         
+[HLS] 段表 128KB + 播放列表 32KB (PSRAM)
+[HLS] 打开 http://live.xmcdn.com/live/40/64.m3u8                                         
+[HTTP] 连接 http://live.xmcdn.com:80/live/40/64.m3u8                                         
+[HLS] 播放列表无媒体段
+[错误] HLS 打开失败
+> next
+[播放] CNR 文艺之声                    
+[URL] http://live.xmcdn.com/live/38/64.m3u8                                         
+[HLS] 段表 128KB + 播放列表 32KB (PSRAM)
+[HLS] 打开 http://live.xmcdn.com/live/38/64.m3u8                                         
+[HTTP] 连接 http://live.xmcdn.com:80/live/38/64.m3u8                                         
+[HLS] 播放列表无媒体段
+[错误] HLS 打开失败
+> next
+[播放] CNR 神州之声                    
+[URL] http://live.xmcdn.com/live/15/64.m3u8                                         
+[HLS] 段表 128KB + 播放列表 32KB (PSRAM)
+[HLS] 打开 http://live.xmcdn.com/live/15/64.m3u8                                         
+[HTTP] 连接 http://live.xmcdn.com:80/live/15/64.m3u8                                         
+[HLS] 播放列表无媒体段
+[错误] HLS 打开失败
+> next
+[播放] CNR 中国之声                    
+[URL] http://live.xmcdn.com/live/1065/64.m3u8                                       
+[HLS] 段表 128KB + 播放列表 32KB (PSRAM)
+[HLS] 打开 http://live.xmcdn.com/live/1065/64.m3u8                                       
+[HTTP] 连接 http://live.xmcdn.com:80/live/1065/64.m3u8                                       
+[HLS] 播放列表无媒体段
+[错误] HLS 打开失败
+> next
+[播放] CNR 哈语广播                    
+[URL] http://live.xmcdn.com/live/1396/64.m3u8                                       
+[HLS] 段表 128KB + 播放列表 32KB (PSRAM)
+[HLS] 打开 http://live.xmcdn.com/live/1396/64.m3u8                                       
+[HTTP] 连接 http://live.xmcdn.com:80/live/1396/64.m3u8                                       
+[HLS] 播放列表无媒体段
+[错误] HLS 打开失败
+> next
+[播放] CNR 经济之声                    
+[URL] http://live.xmcdn.com/live/1066/64.m3u8                                       
+[HLS] 段表 128KB + 播放列表 32KB (PSRAM)
+[HLS] 打开 http://live.xmcdn.com/live/1066/64.m3u8                                       
+[HTTP] 连接 http://live.xmcdn.com:80/live/1066/64.m3u8                                       
+[HLS] 播放列表无媒体段
+[错误] HLS 打开失败
+> next
+[播放] CNR 华夏之声                    
+[URL] http://live.xmcdn.com/live/16/64.m3u8                                         
+[HLS] 段表 128KB + 播放列表 32KB (PSRAM)
+[HLS] 打开 http://live.xmcdn.com/live/16/64.m3u8                                         
+[HTTP] 连接 http://live.xmcdn.com:80/live/16/64.m3u8                                         
+[HLS] 播放列表无媒体段
+[错误] HLS 打开失败
+> next
+[播放] 广东音乐之声 FM99.3               
+[URL] http://live.xmcdn.com/live/74/64.m3u8                                         
+[HLS] 段表 128KB + 播放列表 32KB (PSRAM)
+[HLS] 打开 http://live.xmcdn.com/live/74/64.m3u8                                         
+[HTTP] 连接 http://live.xmcdn.com:80/live/74/64.m3u8                                         
+[HLS] 直播：5 段 targetDur=7s 起始seq=20808755
+[HTTP] 连接 http://broadcast.tx.xmcdn.com:80/live/74_64_260822_000004_262a.aac
+[A2DP] 事件=0xff00 状态=CONNECTED
+[HLS] 预缓冲 37KB
+[播放] 启动成功
+[HTTP] 连接 http://broadcast.tx.xmcdn.com:80/live/74_64_260822_000004_262b.aac
+[状态] 广东音乐之声 FM99.3               | 播放 | vol=10% heap=14792
+[HTTP] 连接 http://broadcast.tx.xmcdn.com:80/live/74_64_260822_000004_262c.aac
+[HTTP] 连接 http://broadcast.tx.xmcdn.com:80/live/74_64_260822_000004_262d.aac
+[A2DP] 事件=0xff00 状态=CONNECTED
+[HTTP] 连接 http://broadcast.tx.xmcdn.com:80/live/74_64_260822_000004_262e.aac
+[HTTP] 连接 http://live.xmcdn.com:80/live/74/64.m3u8                                         
+[HLS] 刷新：+2 新段
+[HTTP] 连接 http://broadcast.tx.xmcdn.com:80/live/74_64_260822_000004_262f.aac
+[HTTP] 连接 http://broadcast.tx.xmcdn.com:80/live/74_64_260822_000004_2630.aac
+[A2DP] 事件=0xff00 状态=CONNECTED
+[AAC] 解码错误 #5 code=-15 AAC decode error -15
+[HTTP] 连接 http://live.xmcdn.com:80/live/74/64.m3u8                                         
+[HLS] 刷新：+1 新段
+[HTTP] 连接 http://broadcast.tx.xmcdn.com:80/live/74_64_260822_000004_2631.aac
+[AAC] 解码错误 #6 code=-15 AAC decode error -15
+[HTTP] 连接 http://live.xmcdn.com:80/live/74/64.m3u8                                         
+[HLS] 刷新：+1 新段
+[HTTP] 连接 http://broadcast.tx.xmcdn.com:80/live/74_64_260822_000004_2632.aac
+[A2DP] 事件=0xff00 状态=CONNECTED
+[HTTP] 连接 http://live.xmcdn.com:80/live/74/64.m3u8                                         
+[AAC] 解码错误 #7 code=-15 AAC decode error -15
+[HLS] 刷新：+1 新段
+[HTTP] 连接 http://broadcast.tx.xmcdn.com:80/live/74_64_260822_000004_2633.aac
+[状态] 广东音乐之声 FM99.3               | 播放 | vol=10% heap=11152
+[HTTP] 连接 http://live.xmcdn.com:80/live/74/64.m3u8                                         
+[A2DP] 事件=0xff00 状态=CONNECTED
+[HLS] 刷新：+1 新段
+[HTTP] 连接 http://broadcast.tx.xmcdn.com:80/live/74_64_260822_000004_2634.aac
+[A2DP] 事件=0xff00 状态=CONNECTED
+[A2DP] 事件=0xff00 状态=CONNECTED
+[状态] 广东音乐之声 FM99.3               | 播放 | vol=10% heap=16000
+[A2DP] 事件=0xff00 状态=CONNECTED
+[播放] 流结束，准备重连
+[A2DP] 事件=0xff00 状态=CONNECTED
+[播放] 尝试重连（第 1 次，退避 3000ms）...
+[播放] 广东音乐之声 FM99.3              
+[URL] http://live.xmcdn.com/live/74/64.m3u8                                         
+[HLS] 段表 128KB + 播放列表 32KB (PSRAM)
+[HLS] 打开 http://live.xmcdn.com/live/74/64.m3u8                                        [AAC] 解码错误 #8 code=-15 AAC decode error -15
+ 
+[HTTP] 连接 http://live.xmcdn.com:80/live/74/64.m3u8                                         
+[HLS] 直播：5 段 targetDur=7s 起始seq=20808767
+[HTTP] 连接 http://broadcast.tx.xmcdn.com:80/live/74_64_260822_000004_2636.aac
+[HLS] 预缓冲 33KB
+[播放] 启动成功
+[HTTP] 连接 http://broadcast.tx.xmcdn.com:80/live/74_64_260822_000004_2637.aac
+[HTTP] 连接 http://broadcast.tx.xmcdn.com:80/live/74_64_260822_000004_2638.aac
