@@ -1,0 +1,6 @@
+# 助手会话内部记忆，不属于知识库内容
+.workbuddy/
+
+# 系统文件
+Thumbs.db
+desktop.ini

@@ -54,6 +54,9 @@
 | [Qwen3.8-Flash 发布](sources/Qwen3.8-Flash发布.md) | `阿里开源Qwen3.8-Flash，性能超Opus4.6价格仅为其3%.md` |
 | [工作通知深度解读助手提示词](sources/工作通知深度解读助手提示词.md) | `工作通知深度解读助手 _ 高阶完整版提示词（标准Markdown）.md` |
 | [DeepSeek Harness Windows 安装完全指南](sources/DeepSeek-Harness-Windows安装完全指南.md) | `DeepSeek Harness 在 Windows 上的安装、磁盘布局与排错完全指南.md` |
+| [在线电台流媒体 URL 清单](sources/在线电台流媒体URL清单.md) | `在线电台流媒体URL清单.md` |
+| [在线电台 URL — radio-browser API 完整集](sources/在线电台URL-radio-browser-API完整集.md) | `在线电台URL-radio-browser-API完整集.json` |
+| [在线电台 URL — 格式化分级清单](sources/在线电台URL-格式化分级清单.md) | `电台_格式化.txt` |
 
 ## 原始资料清单（raw/，只读，按类目标签分组）
 
@@ -90,6 +93,9 @@
 11. `机器人运动会2.0，赛出了哪些新亮点？.md`
 14. `2026，人形机器人的“新纪录”之年.md`
 15. `阿里开源Qwen3.8-Flash，性能超Opus4.6价格仅为其3%.md`
+18. `在线电台流媒体URL清单.md`
+19. `在线电台URL-radio-browser-API完整集.json`
+20. `电台_格式化.txt`
 
 ### 生活常识
 
@@ -98,6 +104,6 @@
 
 ## 统计
 
-- 原始资料：17 份（工作总结 1 / 工作日志 3 / 工作小窍门 1 / AI类技术资料 6 / 数智资讯 4 / 生活常识 2；个人日记 暂无）
-- 概念页：12　工具/人物页：8　资料摘要页：17　合计 37 页
+- 原始资料：20 份（工作总结 1 / 工作日志 3 / 工作小窍门 1 / AI类技术资料 6 / 数智资讯 7 / 生活常识 2；个人日记 暂无）
+- 概念页：12　工具/人物页：8　资料摘要页：20　合计 40 页（sources/ 内另有 3 份非 .md 衍生数据文件随本次新增）
 - 最后编译：2026-09-10
